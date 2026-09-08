@@ -8,6 +8,6 @@
    :body    "Hello, World!"})
 
 (defn -main [& _args]
-  (let [port (Integer/parseInt (or (System/getenv "PORT") "80"))]
+  (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))]
     (println (str "Server running on port " port))
     (http/run-server handler {:port port})))
