@@ -6,4 +6,4 @@ RUN clojure -T:build uber
 
 FROM eclipse-temurin:21-jre-alpine
 COPY --from=build /app/target/app.jar /app.jar
-CMD ["java", "-jar", "/app.jar"]
+CMD ["/opt/java/openjdk/bin/java", "-jar", "/app.jar"]
